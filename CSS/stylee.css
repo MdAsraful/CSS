@@ -1,0 +1,27 @@
+.box1{
+    margin: 30px;
+    background-color: yellowgreen;
+}
+.box2{padding: 30px;
+    background-color: darkgreen !important ;
+}
+nav{
+    background-color: rgba(19, 129, 37, 0.781);
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 10px;
+
+    
+}
+nav a{
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    float: left;;
+    
+
+    
+    
+    
+}
