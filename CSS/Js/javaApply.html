@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="first" class="container ">
+        <h1>I am Gonig to another Block</h1>
+        <dir class="submit">
+            
+            <button type="submit" id="goTo" class="btn btn-success">click me</button>
+
+        </dir>
+        
+    </div>
+    <div class="container" id="second">
+        <h1 style="text-align:center ;">I am here </h1>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$ <span id="currentDeposit">00</span> </h2>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="withdrow status">
+                    <h5>withdrow</h5>
+                    <h2>$ <span id="TWAmount">00</span> </h2>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="balace status">
+                    <h5>Balance</h5>
+                    <h2>$ <span id="currentBalanch" >00 </span> </h2>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-6 " >
+                <div class="submit">
+                    <h4> Deposit</h4>
+                    <br>
+                    <input type="text" class="form-control" placeholder="$amount you Wont's to deposit" id="damount">
+                    <br>
+                    <button class="btn btn-success" id="Deposit">Deposit</button>
+                </div>
+                
+                
+            </div>
+            <div class="col-md-6 ">
+                <div class="submit">
+                    <h4>Withdrow</h4>
+                    <br>
+                    <input type="text" class="form-control" placeholder="$amount you Wont's to Withdrow" id="wamount">
+                    <br>
+                    <button class="btn btn-success" id="Withdrow">Withdrow</button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        const action =document.getElementById("goTo");
+        action.addEventListener("click",function(){
+            const target=document.getElementById("first");
+            target.style.display="none";
+            const show=document.getElementById("second");
+            show.style.display="block";
+
+        });
+        // Deposit Button Event Handler
+        const depositButton = document.getElementById("Deposit");
+        depositButton.addEventListener("click",function(){
+            const target=document.getElementById("damount").value ;
+            const depositNumber= parseFloat(target);
+            
+            updateText("currentDeposit", depositNumber);
+            updateText("currentBalanch", depositNumber);
+
+            document.getElementById("damount").value="";
+        });
+        const WithdrowButton = document.getElementById("Withdrow");
+        WithdrowButton.addEventListener("click",function(){
+            const target=document.getElementById("wamount").value ;
+            const WithdrowNumber= parseFloat(target);
+
+            updateText("TWAmount", WithdrowNumber);
+            updateText("currentBalanch", -1* WithdrowNumber);
+
+            document.getElementById("wamount").value="";
+
+        });
+
+
+        
+        function updateText(id, Number) {
+            const current=document.getElementById(id).innerText;
+            const currentNumber=parseFloat(current);
+            const Total= currentNumber + Number;
+            document.getElementById(id).innerText=Total;
+        };
+        
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+ 

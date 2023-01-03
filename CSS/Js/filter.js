@@ -1,0 +1,1 @@
+const retailCompany = companies.filter(company=>)

@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+  }
+.box1{
+
+    
+        width: 800px;
+        background-color: skyblue;
+        font-size: 50px;
+        padding: 60px 10px 60px 700px;;
+      
+}
+.box2{
+
+    
+    width: 800px;
+    background-color: skyblue;
+    font-size: 50px;
+    padding: 60px 10px 60px 700px;;
+  
+}
+.box3{
+
+    
+    width: 800px;
+    background-color: skyblue;
+    font-size: 50px;
+    padding: 60px 10px 60px 700px;;
+  
+}
